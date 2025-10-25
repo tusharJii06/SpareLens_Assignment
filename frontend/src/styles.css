@@ -1,0 +1,4 @@
+body { font-family: Arial, sans-serif; }
+input, button { margin:5px 0; padding:6px; }
+table { border-collapse: collapse; width:100%; }
+th { background:#eee; }
