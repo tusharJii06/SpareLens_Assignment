@@ -15,6 +15,22 @@ This project delivers a full-stack web application designed for secure dataset m
 
 -----
 
+## ⚙️ Technology Stack
+
+| Component | Technology | Role |
+| :--- | :--- | :--- |
+| **Backend (API)** | **FastAPI** | High-performance, asynchronous web framework (Python). |
+| | **SQLAlchemy** | Python ORM for database interaction (defaulting to SQLite/PostgreSQL). |
+| | **`pandas`** | Data ingestion, cleaning, and manipulation for CSV/Excel parsing. |
+| | **`python-jose`, `passlib[bcrypt]`**| JWT token management and secure hashing utilities. |
+| **Frontend (Client)** | **React.js** | Declarative JavaScript library for UI development. |
+| | **Vite** | Modern, fast, and light-weight frontend build tool. |
+| | **Material-UI (MUI)** | Professional, accessible component library. |
+| | **`@mui/x-data-grid`**| High-performance data table component. |
+| | **`recharts`** | Composable charting library for React. |
+
+-----
+
 ## 🚀 Getting Started
 
 To set up and run the application locally, follow these two concurrent setup processes for the backend and frontend environments.
@@ -74,9 +90,11 @@ The dashboard includes a powerful, custom filtering feature for dynamically quer
 
 ### Supported Filter Examples
 
-**Text Matching**  `Country:UK`, Filters for rows where the `Country` column contains "UK" (case-insensitive).
-**Greater Than**  `Sales:>50000`, Filters for numerical values in `Sales` strictly greater than 50,000. 
-**Less Than or Equal**  `Profit:<=2000`, Filters for numerical values in `Profit` less than or equal to 2,000. 
-**Compound Query**  `Country:USA;Year:2022`, Applies an **AND** condition: matches rows where both the `Country` is "USA" and the `Year` is "2022". 
+| Filter Type | Example Filter String | Description |
+| :--- | :--- | :--- |
+| **Text Matching** | `Country:UK` | Filters for rows where the `Country` column contains "UK" (case-insensitive). |
+| **Greater Than** | `Sales:>50000` | Filters for numerical values in `Sales` strictly greater than 50,000. |
+| **Less Than or Equal** | `Profit:<=2000` | Filters for numerical values in `Profit` less than or equal to 2,000. |
+| **Compound Query** | `Country:USA;Year:2022` | Applies an **AND** condition: matches rows where both the `Country` is "USA" and the `Year` is "2022". |
 
 Apply filters by entering the string and clicking the **Apply** button next to the input field.
